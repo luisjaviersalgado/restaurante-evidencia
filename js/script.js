@@ -269,6 +269,7 @@ function setupEventListeners() {
         document.getElementById('facturaModalTitle').textContent = 'Nueva Factura';
         document.getElementById('facturaForm').reset();
         document.getElementById('facturaId').value = '';
+        facturaItems = [{ descripcion: '', cantidad: 1, precio: 0 }];
         renderFacturaItems();
         openModal('facturaModal');
     });
@@ -759,7 +760,6 @@ let facturaItems = [{ descripcion: '', cantidad: 1, precio: 0 }];
 
 function renderFacturaItems() {
     const tbody = document.getElementById('facturaItemsBody');
-    facturaItems = [{ descripcion: '', cantidad: 1, precio: 0 }];
     
     tbody.innerHTML = facturaItems.map((item, index) => `
         <tr>
