@@ -20,3 +20,10 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/). L
 
 ### Problemas conocidos
 Ver [docs/PROBLEMAS_CONOCIDOS.md](docs/PROBLEMAS_CONOCIDOS.md). No se corrigen en esta línea base y quedan como solicitudes de cambio futuras.
+
+## [1.0.1] – 2026-11-11
+
+### Verificación reportada
+- Se registra la salida compartida por el estudiante: 11 pruebas Playwright (PB-01 a PB-11) terminaron en `OK`.
+- Se incorpora el registro de resultados en `docs/evidencias/resultado-integracion-2026-11-11.md` y se actualiza el informe PDF.
+- La salida JSON no se confirmó; el registro describe esa limitación de forma explícita.

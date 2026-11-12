@@ -68,3 +68,6 @@ El informe APA individual está en [docs/Taller_LineaBase_SIGR.pdf](docs/Taller_
 
 La línea base documentada es el tag v1.0.0-baseline sobre el commit cdf2e5a8726d41cad6b3cb4be002b29dcbae162a. El commit de este documento es posterior y no modifica ese tag.
 
+
+### Evidencia de pruebas
+La ejecución de Playwright reportada el 11/11/2026 mostró 11 de 11 casos en `OK`. El registro transcrito y sus limitaciones están en [docs/evidencias/resultado-integracion-2026-11-11.md](docs/evidencias/resultado-integracion-2026-11-11.md). No se confirmó un archivo `salida.json` en esa ejecución.
