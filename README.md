@@ -61,3 +61,10 @@ HTML5, CSS3 (variables, Flexbox y Grid), JavaScript ES6+, Font Awesome 6.4 y Goo
 ## Licencia
 
 MIT. Ver [LICENSE.txt](LICENSE.txt).
+
+## Repositorio de entrega
+
+El informe APA individual está en [docs/Taller_LineaBase_SIGR.pdf](docs/Taller_LineaBase_SIGR.pdf). Repositorio de entrega: https://github.com/luisjaviersalgado/restaurante-evidencia.git.
+
+La línea base documentada es el tag v1.0.0-baseline sobre el commit cdf2e5a8726d41cad6b3cb4be002b29dcbae162a. El commit de este documento es posterior y no modifica ese tag.
+
