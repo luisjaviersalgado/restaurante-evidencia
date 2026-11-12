@@ -147,7 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function initApp() {
     setupNavigation();
     setupEventListeners();
-    renderPedidos();
+    renderMenu();
+    renderCart();
     renderReservas();
     renderMenuManagement();
     renderUsuarios();
