@@ -1,70 +1,63 @@
-# Sistema de Gestión de Restaurante - El Gourmet
+# Sistema Integral de Gestión de Restaurante (SIGR)
 
-Sistema integral de gestión para restaurantes desarrollado con HTML, CSS y JavaScript vanilla.
+Aplicación web de gestión para restaurantes desarrollada con HTML, CSS y JavaScript sin frameworks.
+Este repositorio contiene la **línea base v1.0.0-baseline** definida para el taller AA2 de Gestión del Software (Unidad 2 – Gestión de la configuración). El código parte de `https://github.com/cacarrascal/TallerRestaurante-.git` (commit `8f2b0d9`) e incorpora dos correcciones controladas (CR-001 y CR-002).
 
-## Características
+## Módulos incluidos en la línea base
 
-### Módulos Implementados
-- **Pedidos**: Gestión de pedidos con carrito de compras, confirmación y estadísticas en tiempo real
-- **Reservas**: Sistema de reservas con calendario de mesas y estados (confirmada, pendiente, cancelada)
-- **Menú**: CRUD completo de platillos con categorías, precios, disponibilidad e imágenes
-- **Usuarios**: Gestión de empleados con roles (admin, mesero, cocinero)
-- **Clientes**: Registro de clientes con historial de pedidos, paginación y filtros
-- **Facturación**: Generación de facturas con cálculo automático de IVA
-- **Reportes**: Gráficos de ventas, productos más vendidos, clientes frecuentes y reservas
+| Módulo | Funcionalidad |
+|---|---|
+| Pedidos | Carrito de compras, confirmación de pedidos y estadísticas del día |
+| Reservas | Calendario de mesas, creación de reservas y cambio de estado |
+| Menú | CRUD de platillos con categorías, precios, disponibilidad e imagen |
+| Usuarios | Gestión de empleados con roles (admin, mesero, cocinero) |
+| Clientes | Registro, búsqueda, filtros y paginación |
+| Facturación | Facturas de contado o crédito con cálculo automático de IVA (16 %) |
+| Reportes | Reportes de ventas, productos, clientes y reservas |
 
-### Funcionalidades
-- Diseño responsivo (móvil y escritorio)
-- Persistencia de datos en localStorage
-- Búsqueda y filtros en tiempo real
-- Paginación en módulos de clientes
-- Validación de formularios
-- Notificaciones toast
-- Datos de prueba precargados
+La persistencia se hace en `localStorage`; no hay base de datos ni servidor. Los datos de ejemplo se cargan automáticamente (16 platillos, 5 usuarios, 25 clientes, 15 pedidos, 15 reservas y 13 facturas).
 
-## Estructura del Proyecto
+## Cómo ejecutar
+
+1. Clonar el repositorio: `git clone <URL-del-repositorio>`.
+2. Abrir `index.html` en un navegador moderno, o servir la carpeta con `python -m http.server 8080` y abrir `http://localhost:8080`.
+3. Usar el menú lateral para cambiar de módulo.
+
+Para restaurar los datos originales, limpiar el `localStorage` del navegador.
+
+## Estructura del proyecto
 
 ```
-TallerRestau/
-├── index.html          # Archivo principal
-├── css/
-│   └── styles.css      # Estilos del proyecto
-├── js/
-│   └── script.js       # Lógica JavaScript
-└── assets/             # Recursos adicionales (imágenes)
+.
+├── index.html            # Interfaz y modales
+├── css/styles.css        # Estilos
+├── js/script.js          # Lógica de todos los módulos
+├── assets/               # Logos e imágenes
+├── tests/integracion.js  # Pruebas básicas de integración (Playwright)
+├── docs/                 # Estructura de datos, despliegue y problemas conocidos
+├── CHANGELOG.md          # Historial de cambios de la línea base
+└── LICENSE.txt           # Licencia MIT
 ```
 
-## Cómo Usar
+## Documentación
 
-1. **Ejecutar**: Abre `index.html` directamente en tu navegador
-2. **Navegar**: Usa el menú lateral para acceder a los diferentes módulos
-3. **Gestionar**: Cada módulo permite CRUD (Crear, Leer, Actualizar, Eliminar)
+- [CHANGELOG.md](CHANGELOG.md)
+- [docs/ESTRUCTURA_DE_DATOS.md](docs/ESTRUCTURA_DE_DATOS.md)
+- [docs/MANUAL_DE_DESPLIEGUE.md](docs/MANUAL_DE_DESPLIEGUE.md)
+- [docs/PROBLEMAS_CONOCIDOS.md](docs/PROBLEMAS_CONOCIDOS.md)
 
-## Datos de Prueba
+## Pruebas
 
-El sistema incluye datos de ejemplo para todas las entidades:
-- 16 platillos en el menú
-- 5 usuarios del sistema
-- 25 clientes registrados
-- 15 pedidos de prueba
-- 15 reservas
-- 13 facturas
+Con Node.js y Playwright instalados (`npm i playwright` y `npx playwright install chromium`):
 
-**Nota**: Los datos se cargan automáticamente. Para restaurar los datos originales, limpia el localStorage del navegador.
+```
+node tests/integracion.js file:///ruta/al/proyecto/index.html salida.json
+```
 
 ## Tecnologías
 
-- HTML5
-- CSS3 (Variables CSS, Flexbox, Grid)
-- JavaScript ES6+
-- Font Awesome 6.4 (Iconos)
-- Google Fonts (Poppins)
-
-## Requisitos
-
-- Navegador moderno (Chrome, Firefox, Edge, Safari)
-- Sin necesidad de servidor - funciona directamente desde archivos locales
+HTML5, CSS3 (variables, Flexbox y Grid), JavaScript ES6+, Font Awesome 6.4 y Google Fonts (Poppins).
 
 ## Licencia
 
-MIT License - Uso自由
+MIT. Ver [LICENSE.txt](LICENSE.txt).
